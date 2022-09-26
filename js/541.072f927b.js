@@ -3,4 +3,4 @@
  * (C) Ionic http://ionicframework.com - MIT License
  */
 const i="ionKeyboardDidShow",o="ionKeyboardDidHide",r=150;let s={},a={},u=!1;const d=()=>{s={},a={},u=!1},h=e=>{c(e),e.visualViewport&&(a=k(e.visualViewport),e.visualViewport.onresize=()=>{y(e),b()||g(e)?f(e):w(e)&&p(e)})},c=e=>{e.addEventListener("keyboardDidShow",(t=>f(e,t))),e.addEventListener("keyboardDidHide",(()=>p(e)))},f=(e,t)=>{D(e,t),u=!0},p=e=>{l(e),u=!1},b=()=>{const e=(s.height-a.height)*a.scale;return!u&&s.width===a.width&&e>r},g=e=>u&&!w(e),w=e=>u&&a.height===e.innerHeight,D=(e,t)=>{const n=t?t.keyboardHeight:e.innerHeight-a.height,o=new CustomEvent(i,{detail:{keyboardHeight:n}});e.dispatchEvent(o)},l=e=>{const t=new CustomEvent(o);e.dispatchEvent(t)},y=e=>{s=Object.assign({},a),a=k(e.visualViewport)},k=e=>({width:Math.round(e.width),height:Math.round(e.height),offsetTop:e.offsetTop,offsetLeft:e.offsetLeft,pageTop:e.pageTop,pageLeft:e.pageLeft,scale:e.scale})}}]);
-//# sourceMappingURL=541.fb8b1752.js.map
+//# sourceMappingURL=541.072f927b.js.map
